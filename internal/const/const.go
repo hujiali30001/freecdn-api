@@ -1,7 +1,10 @@
 package teaconst
 
 const (
-	Version = "1.3.9"
+	Version = "0.6.0"
+
+	// GoEdgeVersion 是本项目基于的 GoEdge 上游版本
+	GoEdgeVersion = "1.3.9"
 
 	ProductName   = "Edge API"
 	ProcessName   = "edge-api"
@@ -17,5 +20,8 @@ const (
 
 	// 其他节点版本号，用来检测是否有需要升级的节点
 
-	NodeVersion = "1.3.9"
+	NodeVersion = "0.6.0"
+
+	// GoEdgeVersion 是本项目基于的 GoEdge 上游版本
+	GoEdgeVersion = "1.3.9"
 )
