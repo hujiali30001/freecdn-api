@@ -107,6 +107,9 @@ var upgradeFuncs = []*upgradeVersion{
 	{
 		"1.3.4", upgradeV1_3_4,
 	},
+	{
+		"1.3.9.1", upgradeV1_3_9_1, // FreeCDN: 扩展 edgeAdmins.password 至 varchar(64)，支持 bcrypt
+	},
 }
 
 // UpgradeSQLData 升级SQL数据

@@ -214,6 +214,22 @@ func upgradeV0_5_8(db *dbs.DB) error {
 	return nil
 }
 
+// v1.3.9.1 (FreeCDN) - 扩展 edgeAdmins.password 列以支持 bcrypt 哈希（ORA-08）
+func upgradeV1_3_9_1(db *dbs.DB) error {
+	// 检查当前列宽，避免重复执行
+	col, err := db.FindCol(0, "SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.COLUMNS WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME='edgeAdmins' AND COLUMN_NAME='password'")
+	if err != nil {
+		return err
+	}
+	if types.Int(col) >= 64 {
+		return nil // 已经够宽，跳过
+	}
+	_, err = db.Exec("ALTER TABLE edgeAdmins MODIFY COLUMN `password` varchar(64) DEFAULT NULL COMMENT '密码'")
+	return err
+}
+
+
+
 // v1.2.9
 func upgradeV1_2_9(db *dbs.DB) error {
 	// 升级WAF规则
