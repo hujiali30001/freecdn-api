@@ -2,7 +2,7 @@ module github.com/hujiali30001/freecdn-api
 
 go 1.21
 
-replace github.com/hujiali30001/freecdn-common => github.com/hujiali30001/EdgeCommon v1.3.10-0.20260316193426-45be148915e8
+replace github.com/hujiali30001/freecdn-common => github.com/hujiali30001/EdgeCommon v1.3.10
 
 require (
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.11.1
