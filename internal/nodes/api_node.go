@@ -31,6 +31,7 @@ import (
 	"google.golang.org/grpc/status"
 	"log"
 	"net"
+	"net/http"
 	"os"
 	"os/exec"
 	"os/signal"
@@ -204,6 +205,21 @@ func (this *APINode) Start() {
 	// 结束启动
 	this.isStarting = false
 	this.progress = nil
+
+	// 健康检查 HTTP 端点（/health），供 install.sh / Docker healthcheck 使用
+	goman.New(func() {
+		var healthMux = http.NewServeMux()
+		healthMux.HandleFunc("/health", func(w http.ResponseWriter, _ *http.Request) {
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			w.WriteHeader(http.StatusOK)
+			_, _ = w.Write([]byte(`{"status":"ok","service":"freecdn-api","version":"` + teaconst.Version + `"}`))
+		})
+		var healthServer = &http.Server{Handler: healthMux}
+		healthListener, err := net.Listen("tcp", ":8004")
+		if err == nil {
+			_ = healthServer.Serve(healthListener)
+		}
+	})
 
 	// 保持进程
 	select {}
