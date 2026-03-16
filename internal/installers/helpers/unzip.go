@@ -5,6 +5,7 @@ import (
 	"errors"
 	"io"
 	"os"
+	"path/filepath"
 )
 
 type Unzip struct {
@@ -71,6 +72,13 @@ func (this *Unzip) Run() error {
 				_ = fileReader.Close()
 			}()
 
+			// 确保父目录存在（zip 条目不一定包含目录条目）
+			if parentDir := filepath.Dir(target); parentDir != "" {
+				if mkErr := os.MkdirAll(parentDir, 0755); mkErr != nil {
+					return mkErr
+				}
+			}
+
 			// remove old
 			_ = os.Remove(target)
 
@@ -93,3 +101,4 @@ func (this *Unzip) Run() error {
 
 	return nil
 }
+
