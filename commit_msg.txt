@@ -1,0 +1,12 @@
+security: ORA-08 upgrade password hashing from MD5 to bcrypt (cost=12)
+
+- admin_dao.go: CheckAdminPassword uses local bcrypt/MD5 compare
+  instead of DB-level equality check
+- admin_dao.go: CreateAdmin / UpdateAdminPassword / UpdateAdmin /
+  UpdateAdminLogin now store bcrypt(password) instead of md5(password)
+- admin_dao.go: add hashPassword() and verifyPassword() helpers
+- admin_model_ext.go: HasWeakPassword() checks bcrypt hashes for new
+  accounts, falls back to MD5 comparison for legacy accounts
+- Transparent migration: legacy MD5 accounts are auto-upgraded to
+  bcrypt on first successful login (no manual migration needed)
+- Password field in DB: md5 hex (32 chars) = legacy; $2a$ prefix = bcrypt

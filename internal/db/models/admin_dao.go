@@ -7,8 +7,30 @@ import (
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/dbs"
 	"github.com/iwind/TeaGo/types"
-	stringutil "github.com/iwind/TeaGo/utils/string"
+	"golang.org/x/crypto/bcrypt"
 )
+
+const bcryptCost = 12
+
+// hashPassword 使用 bcrypt 对密码做哈希（ORA-08）
+func hashPassword(plaintext string) (string, error) {
+	b, err := bcrypt.GenerateFromPassword([]byte(plaintext), bcryptCost)
+	if err != nil {
+		return "", err
+	}
+	return string(b), nil
+}
+
+// verifyPassword 验证密码，兼容旧 MD5 哈希（ORA-08）
+// 优先尝试 bcrypt；若失败则回退到 MD5 比对，让存量账号仍可登录
+func verifyPassword(plaintext, stored string) bool {
+	// bcrypt 哈希以 $2 开头
+	if len(stored) > 0 && stored[0] == '$' {
+		return bcrypt.CompareHashAndPassword([]byte(stored), []byte(plaintext)) == nil
+	}
+	// 回退：旧 MD5 哈希（前端传来的已是 md5(plaintext)，直接比对）
+	return stored == plaintext
+}
 
 const (
 	AdminStateEnabled  = 1 // 已启用
@@ -99,19 +121,41 @@ func (this *AdminDAO) FindAdminFullname(tx *dbs.Tx, adminId int64) (string, erro
 		FindStringCol("")
 }
 
-// CheckAdminPassword 检查用户名、密码
+// CheckAdminPassword 检查用户名、密码（ORA-08：兼容 bcrypt 和旧 MD5）
+// encryptedPassword 是前端传来的 md5(plaintext) 或明文（取决于前端是否做 MD5）
 func (this *AdminDAO) CheckAdminPassword(tx *dbs.Tx, username string, encryptedPassword string) (int64, error) {
 	if len(username) == 0 || len(encryptedPassword) == 0 {
 		return 0, nil
 	}
-	return this.Query(tx).
+
+	// 先取出该用户的 password 字段，再做本地比对
+	one, err := this.Query(tx).
 		Attr("username", username).
-		Attr("password", encryptedPassword).
 		Attr("state", AdminStateEnabled).
 		Attr("isOn", true).
 		Attr("canLogin", 1).
-		ResultPk().
-		FindInt64Col(0)
+		Result("id", "password").
+		Find()
+	if err != nil {
+		return 0, err
+	}
+	if one == nil {
+		return 0, nil
+	}
+	admin := one.(*Admin)
+	if !verifyPassword(encryptedPassword, admin.Password) {
+		return 0, nil
+	}
+
+	// 旧 MD5 账号：首次登录时自动升级为 bcrypt（透明迁移）
+	if len(admin.Password) == 32 { // MD5 hex 长度
+		newHash, hashErr := hashPassword(encryptedPassword)
+		if hashErr == nil {
+			_ = this.Query(tx).Pk(admin.Id).Set("password", newHash).UpdateQuickly()
+		}
+	}
+
+	return int64(admin.Id), nil
 }
 
 // FindAdminIdWithUsername 根据用户名查询管理员ID
@@ -143,26 +187,33 @@ func (this *AdminDAO) FindAdminWithUsername(tx *dbs.Tx, username string) (*Admin
 	return one.(*Admin), nil
 }
 
-// UpdateAdminPassword 更改管理员密码
+// UpdateAdminPassword 更改管理员密码（ORA-08：改用 bcrypt）
 func (this *AdminDAO) UpdateAdminPassword(tx *dbs.Tx, adminId int64, password string) error {
 	if adminId <= 0 {
 		return errors.New("invalid adminId")
 	}
+	hashed, err := hashPassword(password)
+	if err != nil {
+		return err
+	}
 	var op = NewAdminOperator()
 	op.Id = adminId
-	op.Password = stringutil.Md5(password)
-	err := this.Save(tx, op)
-	return err
+	op.Password = hashed
+	return this.Save(tx, op)
 }
 
-// CreateAdmin 创建管理员
+// CreateAdmin 创建管理员（ORA-08：改用 bcrypt）
 func (this *AdminDAO) CreateAdmin(tx *dbs.Tx, username string, canLogin bool, password string, fullname string, isSuper bool, modulesJSON []byte) (int64, error) {
+	hashed, err := hashPassword(password)
+	if err != nil {
+		return 0, err
+	}
 	var op = NewAdminOperator()
 	op.IsOn = true
 	op.State = AdminStateEnabled
 	op.Username = username
 	op.CanLogin = canLogin
-	op.Password = stringutil.Md5(password)
+	op.Password = hashed
 	op.Fullname = fullname
 	op.IsSuper = isSuper
 	if len(modulesJSON) > 0 {
@@ -170,7 +221,7 @@ func (this *AdminDAO) CreateAdmin(tx *dbs.Tx, username string, canLogin bool, pa
 	} else {
 		op.Modules = "[]"
 	}
-	err := this.Save(tx, op)
+	err = this.Save(tx, op)
 	if err != nil {
 		return 0, err
 	}
@@ -189,7 +240,7 @@ func (this *AdminDAO) UpdateAdminInfo(tx *dbs.Tx, adminId int64, fullname string
 	return err
 }
 
-// UpdateAdmin 修改管理员详细信息
+// UpdateAdmin 修改管理员详细信息（ORA-08：改用 bcrypt）
 func (this *AdminDAO) UpdateAdmin(tx *dbs.Tx, adminId int64, username string, canLogin bool, password string, fullname string, isSuper bool, modulesJSON []byte, isOn bool) error {
 	if adminId <= 0 {
 		return errors.New("invalid adminId")
@@ -200,7 +251,11 @@ func (this *AdminDAO) UpdateAdmin(tx *dbs.Tx, adminId int64, username string, ca
 	op.Username = username
 	op.CanLogin = canLogin
 	if len(password) > 0 {
-		op.Password = stringutil.Md5(password)
+		hashed, err := hashPassword(password)
+		if err != nil {
+			return err
+		}
+		op.Password = hashed
 	}
 	op.IsSuper = isSuper
 	if len(modulesJSON) > 0 {
@@ -238,7 +293,7 @@ func (this *AdminDAO) CheckAdminUsername(tx *dbs.Tx, adminId int64, username str
 	return query.Exist()
 }
 
-// UpdateAdminLogin 修改管理员登录信息
+// UpdateAdminLogin 修改管理员登录信息（ORA-08：改用 bcrypt）
 func (this *AdminDAO) UpdateAdminLogin(tx *dbs.Tx, adminId int64, username string, password string) error {
 	if adminId <= 0 {
 		return errors.New("invalid adminId")
@@ -247,7 +302,11 @@ func (this *AdminDAO) UpdateAdminLogin(tx *dbs.Tx, adminId int64, username strin
 	op.Id = adminId
 	op.Username = username
 	if len(password) > 0 {
-		op.Password = stringutil.Md5(password)
+		hashed, err := hashPassword(password)
+		if err != nil {
+			return err
+		}
+		op.Password = hashed
 	}
 	err := this.Save(tx, op)
 	return err
