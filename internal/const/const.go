@@ -4,7 +4,7 @@ const (
 	Version = "0.7.0"
 
 	// GoEdgeVersion 是本项目基于的 GoEdge 上游版本
-	GoEdgeVersion = "1.3.9"
+	GoEdgeVersion = "0.7.0"
 
 	ProductName   = "Edge API"
 	ProcessName   = "edge-api"
