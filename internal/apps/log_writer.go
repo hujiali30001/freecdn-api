@@ -1,8 +1,8 @@
 package apps
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/goman"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils/sizes"
+	"github.com/hujiali30001/freecdn-api/internal/goman"
+	"github.com/hujiali30001/freecdn-api/internal/utils/sizes"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/files"
 	timeutil "github.com/iwind/TeaGo/utils/time"

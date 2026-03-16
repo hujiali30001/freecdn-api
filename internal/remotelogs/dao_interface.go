@@ -3,7 +3,7 @@
 package remotelogs
 
 import (
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
+	"github.com/hujiali30001/freecdn-common/pkg/nodeconfigs"
 	"github.com/iwind/TeaGo/dbs"
 )
 

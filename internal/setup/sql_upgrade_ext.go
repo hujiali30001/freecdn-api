@@ -6,9 +6,9 @@ package setup
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/TeaOSLab/EdgeCommon/pkg/dnsconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/systemconfigs"
+	"github.com/hujiali30001/freecdn-common/pkg/dnsconfigs"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs"
+	"github.com/hujiali30001/freecdn-common/pkg/systemconfigs"
 	"github.com/iwind/TeaGo/dbs"
 	"github.com/iwind/TeaGo/types"
 	timeutil "github.com/iwind/TeaGo/utils/time"

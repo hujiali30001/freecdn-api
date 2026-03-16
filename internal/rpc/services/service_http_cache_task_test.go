@@ -3,7 +3,7 @@
 package services
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/utils"
+	"github.com/hujiali30001/freecdn-api/internal/utils"
 	"github.com/iwind/TeaGo/assert"
 	"testing"
 )

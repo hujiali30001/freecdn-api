@@ -1,7 +1,7 @@
 package configs
 
 import (
-	teaconst "github.com/TeaOSLab/EdgeAPI/internal/const"
+	teaconst "github.com/hujiali30001/freecdn-api/internal/const"
 	"github.com/iwind/TeaGo/Tea"
 	"gopkg.in/yaml.v3"
 	"os"

@@ -4,9 +4,9 @@ package reporters
 
 import (
 	"context"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	"github.com/TeaOSLab/EdgeAPI/internal/errors"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/errors"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs/shared"
 	"github.com/iwind/TeaGo/dbs"
 	"google.golang.org/grpc/peer"
 	"net"

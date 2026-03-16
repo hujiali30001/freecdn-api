@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/TeaOSLab/EdgeAPI/internal/instances"
+	"github.com/hujiali30001/freecdn-api/internal/instances"
 	_ "github.com/iwind/TeaGo/bootstrap"
 	"github.com/iwind/TeaGo/lists"
 	"log"

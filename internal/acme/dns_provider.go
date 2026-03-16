@@ -2,9 +2,9 @@ package acme
 
 import (
 	"fmt"
-	"github.com/TeaOSLab/EdgeAPI/internal/dnsclients"
-	"github.com/TeaOSLab/EdgeAPI/internal/dnsclients/dnstypes"
-	"github.com/TeaOSLab/EdgeAPI/internal/errors"
+	"github.com/hujiali30001/freecdn-api/internal/dnsclients"
+	"github.com/hujiali30001/freecdn-api/internal/dnsclients/dnstypes"
+	"github.com/hujiali30001/freecdn-api/internal/errors"
 	"github.com/go-acme/lego/v4/challenge/dns01"
 	"github.com/iwind/TeaGo/lists"
 	"os"

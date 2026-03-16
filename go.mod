@@ -1,14 +1,14 @@
-module github.com/TeaOSLab/EdgeAPI
+module github.com/hujiali30001/freecdn-api
 
 go 1.21
 
-replace github.com/TeaOSLab/EdgeCommon => github.com/hujiali30001/EdgeCommon v1.3.10-0.20260315182923-7ed7574dde08
+replace github.com/hujiali30001/freecdn-common => github.com/hujiali30001/EdgeCommon v1.3.10-0.20260315182923-7ed7574dde08
 
 require (
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.11.1
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.5.2
 	github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/dns/armdns v1.2.0
-	github.com/TeaOSLab/EdgeCommon v0.0.0-00010101000000-000000000000
+	github.com/hujiali30001/freecdn-common v0.0.0-00010101000000-000000000000
 	github.com/aliyun/alibaba-cloud-sdk-go v1.62.712
 	github.com/andybalholm/brotli v1.0.4
 	github.com/aws/aws-sdk-go v1.40.45

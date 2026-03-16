@@ -1,7 +1,7 @@
 package clients_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models/clients"
+	"github.com/hujiali30001/freecdn-api/internal/db/models/clients"
 	_ "github.com/go-sql-driver/mysql"
 	"testing"
 )

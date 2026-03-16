@@ -1,10 +1,10 @@
 package clients
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	"github.com/TeaOSLab/EdgeAPI/internal/goman"
-	"github.com/TeaOSLab/EdgeAPI/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils/ttlcache"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/goman"
+	"github.com/hujiali30001/freecdn-api/internal/remotelogs"
+	"github.com/hujiali30001/freecdn-api/internal/utils/ttlcache"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/dbs"

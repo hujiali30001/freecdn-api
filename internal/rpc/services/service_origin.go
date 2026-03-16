@@ -4,11 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/ossconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/sslconfigs"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs/ossconfigs"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs/shared"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs/sslconfigs"
 	"github.com/iwind/TeaGo/maps"
 )
 

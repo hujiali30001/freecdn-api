@@ -1,11 +1,11 @@
 package remotelogs
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/configs"
-	teaconst "github.com/TeaOSLab/EdgeAPI/internal/const"
-	"github.com/TeaOSLab/EdgeAPI/internal/goman"
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-api/internal/configs"
+	teaconst "github.com/hujiali30001/freecdn-api/internal/const"
+	"github.com/hujiali30001/freecdn-api/internal/goman"
+	"github.com/hujiali30001/freecdn-common/pkg/nodeconfigs"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 	"github.com/cespare/xxhash"
 	"github.com/iwind/TeaGo/logs"
 	"github.com/iwind/TeaGo/types"

@@ -2,11 +2,11 @@ package models
 
 import (
 	"encoding/json"
-	dbutils "github.com/TeaOSLab/EdgeAPI/internal/db/utils"
-	"github.com/TeaOSLab/EdgeAPI/internal/errors"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/ipconfigs"
+	dbutils "github.com/hujiali30001/freecdn-api/internal/db/utils"
+	"github.com/hujiali30001/freecdn-api/internal/errors"
+	"github.com/hujiali30001/freecdn-api/internal/utils"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs/firewallconfigs"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs/ipconfigs"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/dbs"

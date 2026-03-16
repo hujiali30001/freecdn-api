@@ -1,8 +1,8 @@
 package models
 
 import (
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/reporterconfigs"
+	"github.com/hujiali30001/freecdn-common/pkg/configutils"
+	"github.com/hujiali30001/freecdn-common/pkg/reporterconfigs"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/dbs"

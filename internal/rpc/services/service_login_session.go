@@ -5,8 +5,8 @@ package services
 import (
 	"context"
 	"errors"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 )
 
 // LoginSessionService 登录SESSION服务

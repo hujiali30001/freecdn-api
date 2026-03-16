@@ -2,7 +2,7 @@ package models_test
 
 import (
 	"encoding/json"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/dbs"

@@ -1,7 +1,7 @@
 package dbutils
 
 import (
-	executils "github.com/TeaOSLab/EdgeAPI/internal/utils/exec"
+	executils "github.com/hujiali30001/freecdn-api/internal/utils/exec"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/dbs"
 	"github.com/iwind/TeaGo/lists"

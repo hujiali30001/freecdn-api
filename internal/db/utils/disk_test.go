@@ -3,7 +3,7 @@
 package dbutils_test
 
 import (
-	dbutils "github.com/TeaOSLab/EdgeAPI/internal/db/utils"
+	dbutils "github.com/hujiali30001/freecdn-api/internal/db/utils"
 	_ "github.com/iwind/TeaGo/bootstrap"
 	"testing"
 )

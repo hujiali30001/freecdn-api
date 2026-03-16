@@ -2,7 +2,7 @@ package dnsclients
 
 import (
 	"fmt"
-	"github.com/TeaOSLab/EdgeAPI/internal/dnsclients/dnstypes"
+	"github.com/hujiali30001/freecdn-api/internal/dnsclients/dnstypes"
 )
 
 type BaseProvider struct {

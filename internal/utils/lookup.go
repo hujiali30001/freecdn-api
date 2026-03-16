@@ -2,10 +2,10 @@ package utils
 
 import (
 	"errors"
-	teaconst "github.com/TeaOSLab/EdgeAPI/internal/const"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils/taskutils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/dnsconfigs"
+	teaconst "github.com/hujiali30001/freecdn-api/internal/const"
+	"github.com/hujiali30001/freecdn-api/internal/utils/taskutils"
+	"github.com/hujiali30001/freecdn-common/pkg/configutils"
+	"github.com/hujiali30001/freecdn-common/pkg/dnsconfigs"
 	"github.com/fsnotify/fsnotify"
 	"github.com/iwind/TeaGo/lists"
 	"github.com/iwind/TeaGo/logs"

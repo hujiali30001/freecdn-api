@@ -2,7 +2,7 @@ package dnsclients
 
 import (
 	"errors"
-	"github.com/TeaOSLab/EdgeAPI/internal/dnsclients/dnstypes"
+	"github.com/hujiali30001/freecdn-api/internal/dnsclients/dnstypes"
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests"
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/responses"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/alidns"

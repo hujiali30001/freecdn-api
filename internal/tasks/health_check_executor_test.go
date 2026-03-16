@@ -4,8 +4,8 @@
 package tasks_test
 
 import (
-	teaconst "github.com/TeaOSLab/EdgeAPI/internal/const"
-	"github.com/TeaOSLab/EdgeAPI/internal/tasks"
+	teaconst "github.com/hujiali30001/freecdn-api/internal/const"
+	"github.com/hujiali30001/freecdn-api/internal/tasks"
 	"github.com/iwind/TeaGo/dbs"
 	"testing"
 )

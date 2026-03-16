@@ -3,8 +3,8 @@ package models
 import (
 	"context"
 	"encoding/json"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"github.com/hujiali30001/freecdn-api/internal/utils"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs"
 	"github.com/iwind/TeaGo/dbs"
 )
 

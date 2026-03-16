@@ -2,9 +2,9 @@ package services
 
 import (
 	"context"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models/stats"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/db/models/stats"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 )
 
 // ServerClientSystemMonthlyStatService 操作系统统计

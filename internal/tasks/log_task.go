@@ -3,10 +3,10 @@ package tasks
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	"github.com/TeaOSLab/EdgeAPI/internal/goman"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils/numberutils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/systemconfigs"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/goman"
+	"github.com/hujiali30001/freecdn-api/internal/utils/numberutils"
+	"github.com/hujiali30001/freecdn-common/pkg/systemconfigs"
 	"github.com/iwind/TeaGo/dbs"
 	"time"
 )

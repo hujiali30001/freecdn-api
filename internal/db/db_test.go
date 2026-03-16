@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 	"database/sql/driver"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/iwind/TeaGo/Tea"
 	_ "github.com/iwind/TeaGo/bootstrap"

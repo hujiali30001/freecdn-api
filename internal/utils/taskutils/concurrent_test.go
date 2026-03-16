@@ -3,7 +3,7 @@
 package taskutils_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/utils/taskutils"
+	"github.com/hujiali30001/freecdn-api/internal/utils/taskutils"
 	"sync"
 	"testing"
 )

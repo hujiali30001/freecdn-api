@@ -3,9 +3,9 @@ package services
 import (
 	"context"
 	"encoding/base64"
-	teaconst "github.com/TeaOSLab/EdgeAPI/internal/const"
-	"github.com/TeaOSLab/EdgeAPI/internal/encrypt"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	teaconst "github.com/hujiali30001/freecdn-api/internal/const"
+	"github.com/hujiali30001/freecdn-api/internal/encrypt"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 	"github.com/iwind/TeaGo/assert"
 	"github.com/iwind/TeaGo/maps"
 	stringutil "github.com/iwind/TeaGo/utils/string"

@@ -3,7 +3,7 @@
 package executils_test
 
 import (
-	executils "github.com/TeaOSLab/EdgeAPI/internal/utils/exec"
+	executils "github.com/hujiali30001/freecdn-api/internal/utils/exec"
 	"testing"
 	"time"
 )

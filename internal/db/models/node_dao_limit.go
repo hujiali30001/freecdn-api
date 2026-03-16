@@ -5,7 +5,7 @@ package models
 
 import (
 	"errors"
-	teaconst "github.com/TeaOSLab/EdgeAPI/internal/const"
+	teaconst "github.com/hujiali30001/freecdn-api/internal/const"
 	"github.com/iwind/TeaGo/dbs"
 	"github.com/iwind/TeaGo/types"
 )

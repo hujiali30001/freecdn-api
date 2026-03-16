@@ -1,12 +1,12 @@
 package services
 
 import (
-	teaconst "github.com/TeaOSLab/EdgeAPI/internal/const"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models/stats"
-	"github.com/TeaOSLab/EdgeAPI/internal/errors"
-	"github.com/TeaOSLab/EdgeAPI/internal/goman"
-	"github.com/TeaOSLab/EdgeAPI/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils"
+	teaconst "github.com/hujiali30001/freecdn-api/internal/const"
+	"github.com/hujiali30001/freecdn-api/internal/db/models/stats"
+	"github.com/hujiali30001/freecdn-api/internal/errors"
+	"github.com/hujiali30001/freecdn-api/internal/goman"
+	"github.com/hujiali30001/freecdn-api/internal/remotelogs"
+	"github.com/hujiali30001/freecdn-api/internal/utils"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/dbs"
 	"github.com/iwind/TeaGo/types"

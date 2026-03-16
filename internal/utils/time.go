@@ -2,8 +2,8 @@ package utils
 
 import (
 	"fmt"
-	"github.com/TeaOSLab/EdgeAPI/internal/errors"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils/regexputils"
+	"github.com/hujiali30001/freecdn-api/internal/errors"
+	"github.com/hujiali30001/freecdn-api/internal/utils/regexputils"
 	"github.com/iwind/TeaGo/lists"
 	"github.com/iwind/TeaGo/types"
 	timeutil "github.com/iwind/TeaGo/utils/time"

@@ -5,9 +5,9 @@
 package models
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/utils"
-	"github.com/TeaOSLab/EdgeAPI/internal/zero"
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
+	"github.com/hujiali30001/freecdn-api/internal/utils"
+	"github.com/hujiali30001/freecdn-api/internal/zero"
+	"github.com/hujiali30001/freecdn-common/pkg/nodeconfigs"
 	"github.com/iwind/TeaGo/dbs"
 )
 

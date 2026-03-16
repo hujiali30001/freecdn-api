@@ -2,8 +2,8 @@ package services
 
 import (
 	"context"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models/regions"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-api/internal/db/models/regions"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 )
 
 // RegionProvinceService 省份相关服务

@@ -3,9 +3,9 @@
 package installers_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/installers"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils/sizes"
-	"github.com/TeaOSLab/EdgeCommon/pkg/nodeconfigs"
+	"github.com/hujiali30001/freecdn-api/internal/installers"
+	"github.com/hujiali30001/freecdn-api/internal/utils/sizes"
+	"github.com/hujiali30001/freecdn-common/pkg/nodeconfigs"
 	"testing"
 	"time"
 )

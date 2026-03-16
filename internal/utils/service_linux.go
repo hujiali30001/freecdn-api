@@ -5,8 +5,8 @@ package utils
 
 import (
 	"errors"
-	teaconst "github.com/TeaOSLab/EdgeAPI/internal/const"
-	executils "github.com/TeaOSLab/EdgeAPI/internal/utils/exec"
+	teaconst "github.com/hujiali30001/freecdn-api/internal/const"
+	executils "github.com/hujiali30001/freecdn-api/internal/utils/exec"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/files"
 	"os"

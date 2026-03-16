@@ -2,7 +2,7 @@ package models
 
 import (
 	"encoding/json"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 )
 
 // ToPB 转换成PB对象

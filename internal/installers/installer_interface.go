@@ -1,6 +1,6 @@
 package installers
 
-import "github.com/TeaOSLab/EdgeAPI/internal/db/models"
+import "github.com/hujiali30001/freecdn-api/internal/db/models"
 
 type InstallerInterface interface {
 	// 登录SSH服务

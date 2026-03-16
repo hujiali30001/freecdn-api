@@ -3,8 +3,8 @@
 package utils
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/remotelogs"
-	executils "github.com/TeaOSLab/EdgeAPI/internal/utils/exec"
+	"github.com/hujiali30001/freecdn-api/internal/remotelogs"
+	executils "github.com/hujiali30001/freecdn-api/internal/utils/exec"
 	"github.com/iwind/TeaGo/types"
 	"os/exec"
 	"runtime"

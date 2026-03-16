@@ -3,8 +3,8 @@ package models
 import (
 	"encoding/json"
 	"errors"
-	"github.com/TeaOSLab/EdgeAPI/internal/remotelogs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"github.com/hujiali30001/freecdn-api/internal/remotelogs"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs"
 )
 
 // DecodeAddr 解析地址

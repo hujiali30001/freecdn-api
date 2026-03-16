@@ -3,9 +3,9 @@ package services
 import (
 	"context"
 	"fmt"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models/dns"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/db/models/dns"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 )
 
 // DNSTaskService DNS同步相关任务

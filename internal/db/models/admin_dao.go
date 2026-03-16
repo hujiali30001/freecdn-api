@@ -1,8 +1,8 @@
 package models
 
 import (
-	dbutils "github.com/TeaOSLab/EdgeAPI/internal/db/utils"
-	"github.com/TeaOSLab/EdgeAPI/internal/errors"
+	dbutils "github.com/hujiali30001/freecdn-api/internal/db/utils"
+	"github.com/hujiali30001/freecdn-api/internal/errors"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/dbs"

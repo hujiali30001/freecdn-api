@@ -4,9 +4,9 @@ package services
 
 import (
 	"context"
-	acmeutils "github.com/TeaOSLab/EdgeAPI/internal/acme"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models/acme"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	acmeutils "github.com/hujiali30001/freecdn-api/internal/acme"
+	"github.com/hujiali30001/freecdn-api/internal/db/models/acme"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 )
 
 // ACMEProviderAccountService ACME服务商账号服务

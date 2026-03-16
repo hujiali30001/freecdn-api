@@ -6,7 +6,7 @@ package services
 
 import (
 	"context"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 )
 
 // UserPlanService 用户购买的套餐

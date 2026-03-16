@@ -1,7 +1,7 @@
 package dns_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models/dns"
+	"github.com/hujiali30001/freecdn-api/internal/db/models/dns"
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/iwind/TeaGo/bootstrap"
 	"github.com/iwind/TeaGo/dbs"

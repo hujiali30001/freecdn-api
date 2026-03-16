@@ -3,7 +3,7 @@
 package maputils_test
 
 import (
-	maputils "github.com/TeaOSLab/EdgeAPI/internal/utils/maps"
+	maputils "github.com/hujiali30001/freecdn-api/internal/utils/maps"
 	"github.com/iwind/TeaGo/assert"
 	"testing"
 )

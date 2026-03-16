@@ -1,7 +1,7 @@
 package dns
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/errors"
+	"github.com/hujiali30001/freecdn-api/internal/errors"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/iwind/TeaGo/Tea"
 	"github.com/iwind/TeaGo/dbs"

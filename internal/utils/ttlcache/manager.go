@@ -3,8 +3,8 @@
 package ttlcache
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/goman"
-	"github.com/TeaOSLab/EdgeAPI/internal/zero"
+	"github.com/hujiali30001/freecdn-api/internal/goman"
+	"github.com/hujiali30001/freecdn-api/internal/zero"
 	"sync"
 	"time"
 )

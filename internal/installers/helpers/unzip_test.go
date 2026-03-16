@@ -1,7 +1,7 @@
 package helpers_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/installers/helpers"
+	"github.com/hujiali30001/freecdn-api/internal/installers/helpers"
 	"github.com/iwind/TeaGo/Tea"
 	_ "github.com/iwind/TeaGo/bootstrap"
 	"testing"

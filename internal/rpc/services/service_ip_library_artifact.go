@@ -5,11 +5,11 @@ package services
 import (
 	"context"
 	"encoding/json"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	"github.com/TeaOSLab/EdgeAPI/internal/errors"
-	rpcutils "github.com/TeaOSLab/EdgeAPI/internal/rpc/utils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/iplibrary"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/errors"
+	rpcutils "github.com/hujiali30001/freecdn-api/internal/rpc/utils"
+	"github.com/hujiali30001/freecdn-common/pkg/iplibrary"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 )
 
 // IPLibraryArtifactService IP库制品

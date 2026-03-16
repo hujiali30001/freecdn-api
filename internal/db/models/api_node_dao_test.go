@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/utils"
+	"github.com/hujiali30001/freecdn-api/internal/utils"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/iwind/TeaGo/dbs"
 	"runtime"

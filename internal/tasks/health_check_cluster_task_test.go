@@ -1,7 +1,7 @@
 package tasks_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/tasks"
+	"github.com/hujiali30001/freecdn-api/internal/tasks"
 	"github.com/iwind/TeaGo/dbs"
 	"testing"
 )

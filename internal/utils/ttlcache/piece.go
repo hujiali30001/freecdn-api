@@ -1,8 +1,8 @@
 package ttlcache
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/utils"
-	"github.com/TeaOSLab/EdgeAPI/internal/utils/expires"
+	"github.com/hujiali30001/freecdn-api/internal/utils"
+	"github.com/hujiali30001/freecdn-api/internal/utils/expires"
 	"github.com/iwind/TeaGo/types"
 	"sync"
 	"time"

@@ -2,7 +2,7 @@ package models
 
 import (
 	"encoding/json"
-	"github.com/TeaOSLab/EdgeAPI/internal/remotelogs"
+	"github.com/hujiali30001/freecdn-api/internal/remotelogs"
 )
 
 // DecodeModules 解析模块

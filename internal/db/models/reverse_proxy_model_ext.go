@@ -2,7 +2,7 @@ package models
 
 import (
 	"encoding/json"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs"
+	"github.com/hujiali30001/freecdn-common/pkg/serverconfigs"
 	"github.com/iwind/TeaGo/logs"
 )
 

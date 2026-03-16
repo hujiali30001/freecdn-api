@@ -4,7 +4,7 @@ package models_test
 
 import (
 	"encoding/json"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
 	"github.com/iwind/TeaGo/dbs"
 	timeutil "github.com/iwind/TeaGo/utils/time"
 	"testing"

@@ -3,7 +3,7 @@
 package models_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
 	"testing"
 )
 

@@ -3,7 +3,7 @@
 package dbutils
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/goman"
+	"github.com/hujiali30001/freecdn-api/internal/goman"
 	"github.com/go-sql-driver/mysql"
 	"github.com/iwind/TeaGo/dbs"
 	"golang.org/x/sys/unix"

@@ -3,7 +3,7 @@
 package dnsclients_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/dnsclients"
+	"github.com/hujiali30001/freecdn-api/internal/dnsclients"
 	"github.com/iwind/TeaGo/assert"
 	"testing"
 )

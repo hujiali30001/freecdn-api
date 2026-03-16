@@ -1,8 +1,8 @@
 package tasks
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	"github.com/TeaOSLab/EdgeAPI/internal/goman"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	"github.com/hujiali30001/freecdn-api/internal/goman"
 	"github.com/iwind/TeaGo/dbs"
 	"time"
 )

@@ -4,7 +4,7 @@ package dnsclients
 
 import (
 	"errors"
-	"github.com/TeaOSLab/EdgeAPI/internal/dnsclients/dnstypes"
+	"github.com/hujiali30001/freecdn-api/internal/dnsclients/dnstypes"
 	"github.com/iwind/TeaGo/maps"
 	"github.com/iwind/TeaGo/types"
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common"

@@ -3,7 +3,7 @@
 package setup_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/setup"
+	"github.com/hujiali30001/freecdn-api/internal/setup"
 	"github.com/iwind/TeaGo/assert"
 	"testing"
 )

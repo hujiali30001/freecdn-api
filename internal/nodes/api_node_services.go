@@ -3,10 +3,10 @@
 package nodes
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/rpc/services"
-	"github.com/TeaOSLab/EdgeAPI/internal/rpc/services/clients"
-	"github.com/TeaOSLab/EdgeAPI/internal/rpc/services/users"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-api/internal/rpc/services"
+	"github.com/hujiali30001/freecdn-api/internal/rpc/services/clients"
+	"github.com/hujiali30001/freecdn-api/internal/rpc/services/users"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 	"google.golang.org/grpc"
 	"reflect"
 	"strings"

@@ -3,7 +3,7 @@
 package numberutils_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/utils/numberutils"
+	"github.com/hujiali30001/freecdn-api/internal/utils/numberutils"
 	"math"
 	"testing"
 )

@@ -2,12 +2,12 @@ package services
 
 import (
 	"context"
-	"github.com/TeaOSLab/EdgeAPI/internal/acme"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models"
-	acmemodels "github.com/TeaOSLab/EdgeAPI/internal/db/models/acme"
-	"github.com/TeaOSLab/EdgeAPI/internal/db/models/dns"
-	"github.com/TeaOSLab/EdgeAPI/internal/dnsclients"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"github.com/hujiali30001/freecdn-api/internal/acme"
+	"github.com/hujiali30001/freecdn-api/internal/db/models"
+	acmemodels "github.com/hujiali30001/freecdn-api/internal/db/models/acme"
+	"github.com/hujiali30001/freecdn-api/internal/db/models/dns"
+	"github.com/hujiali30001/freecdn-api/internal/dnsclients"
+	"github.com/hujiali30001/freecdn-common/pkg/rpc/pb"
 )
 
 // ACMETaskService ACME任务相关服务

@@ -3,8 +3,8 @@
 package utils_test
 
 import (
-	"github.com/TeaOSLab/EdgeAPI/internal/utils"
-	"github.com/TeaOSLab/EdgeCommon/pkg/dnsconfigs"
+	"github.com/hujiali30001/freecdn-api/internal/utils"
+	"github.com/hujiali30001/freecdn-common/pkg/dnsconfigs"
 	"testing"
 )
 
