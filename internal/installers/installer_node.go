@@ -114,13 +114,17 @@ func (this *NodeInstaller) Install(dir string, params interface{}, installStatus
 		return errors.New("unzip installer failed: " + stderr)
 	}
 
+
 	// 修改配置文件
 	{
 		var configFile = dir + "/edge-node/configs/api_node.yaml"
 
-		// sudo之后我们需要修改配置目录才能写入文件
+		// sudo之后我们需要修改配置目录和文件本身才能写入
+		// chown 目录（让 SFTP 可以在里面创建/覆盖文件）
+		// chown 文件本身（文件由 helper 以 root 身份解压，SFTP 以普通用户写时会被拒绝）
 		if this.client.sudo {
 			_, _, _ = this.client.Exec("chown " + this.client.User() + " " + filepath.Dir(configFile))
+			_, _, _ = this.client.Exec("chown " + this.client.User() + " " + configFile)
 		}
 
 		var data = []byte(`rpc.endpoints: [ ${endpoints} ]
